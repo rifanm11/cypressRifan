@@ -1,9 +1,0 @@
-Feature: feature to test google search functionality
-
-  @Smoke
-  Scenario: Open Main Menu with name Academy
-    Given browser window is open
-    And user navigate to url "https://stockbit.com/"
-    And click menu with name "Blog"
-    Then Verify title in new tab is "Stockbit Snips"
-    And Verify all element Blog menu is exist

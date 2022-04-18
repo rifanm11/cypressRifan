@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="SeleniumUI" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="StepDefinitions.TestRunner" time="15.701">
-    <testsuite name="feature to test google search functionality #2" time="15.701">
-      <testcase name="Open Main Menu with name Pro Tools" classname="feature to test google search functionality #2" time="15.701"/>
-    </testsuite>
-  </testsuite>
-</testrun>
