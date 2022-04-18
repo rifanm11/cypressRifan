@@ -1,0 +1,39 @@
+package StepDefinitions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.And;
+
+public class ControllerClick {
+	
+	WebDriver driver;
+	
+	public ControllerClick (ShareClass shareClass){
+		driver = shareClass.startBrowser();
+	}
+	
+
+	@And("click menu with name \"(.*)\"$")
+	public void click_by_name(String Menu) throws InterruptedException {
+		
+		
+		driver.findElement(By.xpath("//*[contains(text(), '" +Menu+"')]")).sendKeys(Keys.ENTER);
+		
+		 
+		Thread.sleep(2000);
+	}
+	
+	@And("click menu with href \"(.*)\"$")
+	public void click_by_href(String href) throws InterruptedException {
+			
+		driver.findElement(By.xpath("//*[@href= '" +href+ "']")).sendKeys(Keys.ENTER);
+		
+		 
+		Thread.sleep(2000);
+	}
+
+}

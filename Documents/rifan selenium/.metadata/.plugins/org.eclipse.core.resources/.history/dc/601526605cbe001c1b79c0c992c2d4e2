@@ -1,0 +1,7 @@
+Feature: feature to test google search functionality
+    
+   @MyTest3
+   Scenario: Open Main Menu with name Pro Tools
+   Given browser window is open
+   And user navigate to url "https://stockbit.com/"
+   And click menu with name "Pro Tools"

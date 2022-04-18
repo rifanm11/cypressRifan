@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="SeleniumUI" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="StepDefinitions.TestRunner" time="8.622">
+    <testsuite name="feature to test Home Menu" time="8.622">
+      <testcase name="Open Home Menu and do validation" classname="feature to test Home Menu" time="8.622">
+        <failure>
+          <expected>Stockbit - Investasi Saham Bersama Komunitas Saham Terbesar di Indonesia</expected>
+          <actual>Stockbit-Komunitas Saham Indonesia</actual>
+          org.junit.ComparisonFailure: Condition true expected:&lt;Stockbit[ - Investasi Saham Bersama Komunitas Saham Terbesar di] Indonesia&gt; but was:&lt;Stockbit[-Komunitas Saham] Indonesia&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at StepDefinitions.ControllerVerify.validatio_title(ControllerVerify.java:75)
+	at ✽.Validation title is ""(file:///Users/rifan.meldiana/Documents/rifan%20selenium/SeleniumUI/src/test/resources/features/Home_Menu.feature:6)
+
+
+        </failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

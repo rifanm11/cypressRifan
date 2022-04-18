@@ -1,0 +1,8 @@
+Feature: feature to test google search functionality
+    
+    @Smoke
+   Scenario: Open Home Menu and do validation
+    Given user navigate to url "https://stockbit.com/"
+    And Validation title is ""
+    Then Validation all element is exist
+    

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="582.361">
+    <testcase classname="feature to About Us functionality" name="Open About Us Menu with name Pro Tools" time="68.757">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "About Us".........................................passed
+Then Verify title is "About Us | Stockbit - Komunitas Saham Indonesia"......passed
+And Verify all element About Us menu is exist...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to Academy Menu" name="Open Main Menu with name Academy" time="61.989">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Academy"..........................................passed
+Then Verify title in new tab is "Stockbit Academy"..........................passed
+And Verify all element Academy menu is exist................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test Blog Menu" name="Open Main Menu with name Stockbit Snip" time="58.297">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Blog".............................................passed
+Then Verify title in new tab is "Stockbit Snips"............................passed
+And Verify all element Blog menu is exist...................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test Blog Menu" name="Open Main Menu with name Open Stockbit" time="53.774">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Blog".............................................passed
+And click menu with href "https://stockbit.com/"............................passed
+Then Verify all element Home menu is exist..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test Home Menu" name="Open Home Menu and do validation" time="48.852">
+        <system-out><![CDATA[Given user navigate to url "https://stockbit.com/"..........................passed
+And Verify title is "Stockbit - Investasi Saham Bersama Komunitas Saham Terbesar di Indonesia".passed
+Then Verify all element Home menu is exist..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to Investing Home Menu" name="Open Main Menu with name Investing" time="57.662">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Investing"........................................passed
+Then Verify title is "Stockbit - Mulai Investasi Saham".....................passed
+And Verify all element Investing menu is exist..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login functionality test" name="Open Main Menu with invalid Credential" time="56.67">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Log In"...........................................passed
+When Input Text for name "username" and fill "username".....................passed
+And Input Text for name "password" and fill "password"......................passed
+And click button with value "Login".........................................passed
+Then Verify Show Text is "Username atau password salah. Mohon coba lagi."...passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login functionality test" name="Open Main Menu with valid Credential" time="57.444">
+        <failure message="Condition true expected:&lt;Stockbit - [Investasi Saham Bersama Komunitas Saham Terbesar di] Indonesia&gt; but was:&lt;Stockbit - [Komunitas Saham] Indonesia&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Log In"...........................................passed
+When Input Text for name "username" and fill "Fill Correct username"........passed
+And Input Text for name "password" and fill "Fill correct password".........passed
+And click button with value "Login".........................................passed
+Then Verify title is "Stockbit - Komunitas Saham Indonesia".................failed
+And Verify Success to Login.................................................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: Condition true expected:<Stockbit - [Investasi Saham Bersama Komunitas Saham Terbesar di] Indonesia> but was:<Stockbit - [Komunitas Saham] Indonesia>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at StepDefinitions.ControllerVerify.validatio_title(ControllerVerify.java:62)
+	at ✽.Verify title is "Stockbit - Komunitas Saham Indonesia"(file:///Users/rifan.meldiana/Documents/rifan%20selenium/SeleniumUI/src/test/resources/features/Login.feature:21)
+]]></failure>
+    </testcase>
+    <testcase classname="feature to test Pro tools Menu" name="Open Main Menu with name Pro Tools" time="52.622">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Pro Tools"........................................passed
+Then Verify title is "Stockbit - Professional Tools Saham Bahkan Untuk Pemula".passed
+And Verify all element Pro Tools menu is exist..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Register Form Validity format" name="Validiy format in register form" time="65.874">
+        <system-out><![CDATA[Given browser window is open................................................passed
+And user navigate to url "https://stockbit.com/"............................passed
+And click menu with name "Sign Up"..........................................passed
+When click menu with name "Register with Email".............................passed
+And Input Text with label "Your Name" and fill "My Name"....................passed
+And Input Text with label "Your Email" and fill "My Email"..................passed
+And Input Text with label "Username" and fill "My Username".................passed
+And Input Text with label "Password" and fill "My Password".................passed
+And Input Text with label "Confirm Password" and fill "Confirm Password"....passed
+And click button with value "Register"......................................passed
+Then Verify Show Text is "Format email salah"...............................passed
+And Verify Show Text is "value hanya dapat menggunakan huruf dan angka".....passed
+And Verify Show Text is "Password does not match"...........................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -1,0 +1,8 @@
+Feature: feature to test google search functionality
+    
+   @Smoke
+   Scenario: Open Main Menu with name Pro Tools
+    Given browser window is open
+    And user navigate to url "https://stockbit.com/"
+    And click menu with name "Pro Tools"
+    Then Verify title is "Stockbit - Professional Tools Saham Bahkan Untuk Pemula"

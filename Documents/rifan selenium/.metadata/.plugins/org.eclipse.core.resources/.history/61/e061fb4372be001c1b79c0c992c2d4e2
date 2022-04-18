@@ -1,0 +1,12 @@
+Feature: login functionality test
+
+   @Smoke
+   Scenario: Open Main Menu with valid Credential
+    Given browser window is open
+    And user navigate to url "https://stockbit.com/"
+    And click menu with name "Log In"
+    When Input Text for name "username" and fill "Rifanmeldiana"
+    And Input Text for name "password" and fill "R!fanm11@"
+    And click button with value "Login"
+    Then Verify title is "Stockbit - Komunitas Saham Indonesia"
+    #Then Verify Success to Login

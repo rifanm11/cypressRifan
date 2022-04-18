@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="SeleniumUI" tests="2" started="2" failures="0" errors="4" ignored="0">
+  <testsuite name="StepDefinitions.TestRunner" time="0.108">
+    <testsuite name="feature to test google search functionality #2" time="0.108">
+      <testcase name="Open Main Menu with name Investing" classname="feature to test google search functionality #2" time="0.096">
+        <error>java.lang.Error: Unresolved compilation problem: 
+	Void methods cannot return a value
+
+	at StepDefinitions.ShareClass.browserSetup(ShareClass.java:35)
+
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
+	at StepDefinitions.ShareClass.closeBrowser(ShareClass.java:42)
+
+</error>
+      </testcase>
+      <testcase name="Open Main Menu with name Pro Tools" classname="feature to test google search functionality #2" time="0.009">
+        <error>java.lang.Error: Unresolved compilation problem: 
+	Void methods cannot return a value
+
+	at StepDefinitions.ShareClass.browserSetup(ShareClass.java:35)
+
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
+	at StepDefinitions.ShareClass.closeBrowser(ShareClass.java:42)
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

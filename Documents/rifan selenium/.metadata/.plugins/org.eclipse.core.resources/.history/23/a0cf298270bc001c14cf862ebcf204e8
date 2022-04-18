@@ -1,0 +1,32 @@
+package StepDefinitions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+
+public class ControllerClick {
+	
+	@SuppressWarnings("deprecation")
+	@And("click investing menu")
+	public void click_investing() throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
+		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));  
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		
+		System.out.println("Inside Investing - hits enter");
+		
+		driver.findElement(By.xpath("//*[contains(text(),'Investing')]")).sendKeys(Keys.ENTER);
+		
+		 
+		Thread.sleep(2000);
+	}
+
+}

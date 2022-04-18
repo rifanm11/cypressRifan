@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="SeleniumUI" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="StepDefinitions.TestRunner" time="77.824">
+    <testsuite name="login functionality test #2" time="77.824">
+      <testcase name="Open Main Menu with invalid Credential" classname="login functionality test #2" time="77.824"/>
+    </testsuite>
+  </testsuite>
+</testrun>

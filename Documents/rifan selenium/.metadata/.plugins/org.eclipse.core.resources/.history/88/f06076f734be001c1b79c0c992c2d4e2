@@ -1,0 +1,74 @@
+package StepDefinitions;
+
+import java.time.Duration;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Then;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ControllerVerify {
+	
+	WebDriver driver;
+	public ControllerVerify (ShareClass shareClass){
+		driver = shareClass.browserSetup();
+	}
+	
+	
+//	WebDriver driver;
+//	
+//	 private ControllerGeneral controllergeneral;
+//
+//	   // PicoContainer injects class ContextSteps
+//	   public ControllerVerify (ControllerGeneral controllergeneral) {
+//	      this.controllergeneral = controllergeneral;
+//	   }
+//	   
+	
+//	WebDriver driver = null;
+//	
+//	@Before
+//	public void browserSetup() {
+//		
+//		System.out.println("  I am inside browserSetup");
+//		WebDriverManager.chromedriver().setup();
+//		
+//		driver = new ChromeDriver();
+//		
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
+//		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));  
+//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+//		driver.manage().window().maximize();
+//		
+//	}
+//	
+
+	@Then("user is navigated to search results")
+	public void user_is_navigated_to_search_results() {
+		
+		System.out.println("Inside Step - user is navigated to search results");
+		
+//		WebDriver driver = controllergeneral.getDriver();
+//		
+		String bodyText = driver.findElement(By.xpath("//*[contains(text(),'3 Langkah Mudah Investasi Saham di Stockbit')]")).getText();
+		String Text = "3 Langkah Mudah Investasi Saham di Stockbit";
+		
+		Assert.assertEquals("Text not found!", bodyText, Text);
+		
+		driver.getPageSource().contains("Daftar 100% Online");
+		driver.getPageSource().contains("Tanpa Minimum Deposit");
+		driver.getPageSource().equals("3 Langkah Mudah Investasi Saham di Stockbittt");
+		
+		String Actual = driver.getTitle();
+        String Expected = "Stockbit - Mulai Investasi Saham";
+
+        Assert.assertEquals("Condition true", Actual, Expected);
+		
+        driver.navigate().back();
+	}
+
+}

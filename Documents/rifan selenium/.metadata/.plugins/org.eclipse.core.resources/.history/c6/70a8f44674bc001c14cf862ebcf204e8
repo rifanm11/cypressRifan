@@ -1,0 +1,43 @@
+package StepDefinitions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.github.dockerjava.api.model.Driver;
+
+import io.cucumber.java.en.And;
+
+public class ControllerClick {
+	
+
+	   private ControllerGeneral controllergeneral;
+
+	   // PicoContainer injects class ContextSteps
+	   public OtherClassSteps (ControllerGeneral controllergeneral) {
+	      this.controllergeneral = controllergeneral;
+	   }
+	
+	@SuppressWarnings("deprecation")
+	@And("click investing menu")
+	public void click_investing() throws InterruptedException {
+		
+//		WebDriver driver = new ChromeDriver();
+		WebDriver driver = controllergeneral.getDriver();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  
+		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));  
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		
+		System.out.println("Inside Investing - hits enter");
+		
+		driver.findElement(By.xpath("//*[contains(text(),'Investing')]")).sendKeys(Keys.ENTER);
+		
+		 
+		Thread.sleep(2000);
+	}
+
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="SeleniumUI" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="StepDefinitions.TestRunner" time="125.747">
+    <testsuite name="login functionality test" time="61.426">
+      <testcase name="Open Main Menu with invalid Credential" classname="login functionality test" time="61.426"/>
+    </testsuite>
+    <testsuite name="Register Form Validity format" time="64.317">
+      <testcase name="Validiy format in register form" classname="Register Form Validity format" time="64.317"/>
+    </testsuite>
+  </testsuite>
+</testrun>

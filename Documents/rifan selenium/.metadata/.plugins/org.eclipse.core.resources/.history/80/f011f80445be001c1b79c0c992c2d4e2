@@ -1,0 +1,7 @@
+Feature: feature to test Home Menu
+
+  @Smoke
+  Scenario: Open Home Menu and do validation
+    Given user navigate to url "https://stockbit.com/"
+    And Validation title is "Stockbit[ - Investasi Saham Bersama Komunitas Saham Terbesar di] Indonesia"
+    Then Validation all element Home menu is exist

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="SeleniumUI" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="StepDefinitions.TestRunner" time="17.306">
+    <testsuite name="feature to Investing Home Menu #1" time="17.306">
+      <testcase name="Open Main Menu with name Investing" classname="feature to Investing Home Menu #1" time="17.306">
+        <error>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at StepDefinitions.ControllerVerify.validatio_title(ControllerVerify.java:81)
+	at ✽.Verify title is "Stockbit - Mulai Investasi Saham"(file:///Users/rifan.meldiana/Documents/rifan%20selenium/SeleniumUI/src/test/resources/features/Investing_Menu.feature:8)
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
